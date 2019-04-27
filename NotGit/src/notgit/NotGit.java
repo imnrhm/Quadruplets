@@ -7,11 +7,11 @@ package notgit;
 
 /**
  *
- * @author Asus
+ * @author Quadruplets
  */
 public class NotGit<E> {
     
-     private Node<E> head;
+    private Node<E> head;
     private Node<E> tail;
     private int size;
     
@@ -20,22 +20,6 @@ public class NotGit<E> {
         size = 0;
         this.head = null;
         this.tail = null;
-    }
-    
-    public class Node<E>{
-        E element;
-        Node<E> next;
-        Node<E> prev;
-        
-        public Node(E element, Node next, Node prev){
-            this.element = element;
-            this.next = next;
-            this.prev = prev;
-        }
-        
-        public Node(E element){
-            this(element, null, null);
-        }
     }
     
     public void addFirst(E element){
@@ -65,6 +49,7 @@ public class NotGit<E> {
         size++;
         //System.out.println("adding " + element);
     }
+    
     public void add(int index, E element){
         if(index < 0 || index > size){
             
@@ -180,14 +165,6 @@ public class NotGit<E> {
         temp = null;
         tail.prev = tail.next = null;
         size = 0;
-    }
-    
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
     }
     
 }
